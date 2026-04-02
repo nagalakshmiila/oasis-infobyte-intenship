@@ -1,0 +1,33 @@
+Password Generator (Python):
+This is a simple Python program that generates a random password based on user preferences.
+Features:
+Generate secure random passwords
+Choose password length
+Option to include:
+Letters (A–Z, a–z)
+Numbers (0–9)
+Symbols (!@#$...)
+Requirements:
+No extra libraries needed 
+Uses built-in Python modules:
+random
+string
+How to Run:
+Save the file as password.py
+Open terminal
+Run
+Example:
+Enter password length: 8
+Include letters? (y/n): y
+Include numbers? (y/n): y
+Include symbols? (y/n): n
+Generated Password: aB3kL9xQ
+Note:
+You must select at least one option (letters, numbers, or symbols)
+Otherwise, the program will show an error
+Future Improvements:
+Add GUI version
+Copy password to clipboard 
+Save passwords securely 
+Password strength checker 
+Author:Naga Lakshmi
