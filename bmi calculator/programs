@@ -1,12 +1,10 @@
 def calculate_bmi(weight,height):
     return weight/(height**2)
-
 def get_category(bmi):
     if bmi<18.5:return "Underweight"
     elif bmi<24.9:return "Normal weight"
     elif bmi<29.9:return "Overweight"
     else:return "Obese"
-
 def main():
     print("🧮 BMI Calculator (CLI)")
     try:
@@ -20,6 +18,5 @@ def main():
         print(f"📌 Category: {category}")
     except ValueError:
         print("❌ Please enter valid numbers.")
-
 if __name__=="__main__":
     main()
