@@ -1,0 +1,32 @@
+import speech_recognition as sr
+import pyttsx3
+import datetime
+r=sr.Recognizer()
+engine=pyttsx3.init()
+def speak(text):
+    print("Assistant:",text)
+    engine.say(text)
+    engine.runAndWait()
+def listen():
+    with sr.Microphone() as source:
+        print("Speak something...")
+        audio=r.listen(source)
+    try:
+        text=r.recognize_google(audio)
+        print("You:",text)
+        return text.lower()
+    except:
+        return ""
+speak("Hello! I am your assistant.")
+while True:
+    command=listen()
+    if "hello" in command:
+        speak("Hi Naga Lakshmi!")
+    elif "your name" in command:
+        speak("I am a simple voice assistant.")
+    elif "date" in command:
+        date=datetime.datetime.now().strftime("%Y-%m-%d")
+        speak(f"Todays date is{date}")
+    elif "stop" in command:
+        speak("Goodbye!")
+        break
